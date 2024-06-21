@@ -22,7 +22,7 @@ console.log(table[0][2],table[1][0],table[2][1]);
 //5) 'table' is an example of a 2-dimensional array. The first “level” contains the element arrays, and the second level holds the name/symbol/mass values. Experiment! Create a 3-dimensional array and print out one entry from each level in the array.
 console.log(table);
 console.log(table.toString());
-let allElements = [[element1],[element2],[element26]];
+let allElements = [element1,element2,element26];
 elements = allElements.toString();
 let table3d = [allElements, table];
 console.log('-------------------------Level 4---------------------');
