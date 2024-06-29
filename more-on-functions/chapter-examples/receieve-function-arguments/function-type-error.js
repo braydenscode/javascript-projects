@@ -3,3 +3,5 @@ function callMe(func) {
 }
 
 callMe("Al");
+
+//Causes a TypeError
