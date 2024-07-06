@@ -15,3 +15,16 @@ function randomSelection(arr){
  //a) Print 3 random selections from each array.
  //b) Have the code randomly pick one array, and then print 2 random items from it.
  //c) Create a new array, then fill it with one random item from words and happiness. Print the new array.
+ console.log('-----------');
+ for(i=0; i < 3; i++) {
+  console.log(`From happiness: ${randomSelection(happiness)}. From words: ${randomSelection(words)}.`);
+ }
+ console.log('-----------');
+ let arraySquared = [happiness, words];
+ let array = (randomSelection(arraySquared));
+ for (i = 0; i < arraySquared.length;i++) {
+ console.log(randomSelection(array));
+ }
+console.log('-----------');
+ let randomArray = [happiness[Math.floor(Math.random()*happiness.length)], words[Math.floor(Math.random()*words.length)]];
+ console.log(randomArray);
