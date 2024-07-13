@@ -12,9 +12,15 @@ function whoWon(player1,player2){
      return 'Player 2 wins!';
    }
    
-   if (player1 === 'scissors' && player2 === 'rock '){
+   if (player1 === 'scissors' && player2 === 'rock'){
      return 'Player 2 wins!';
    }
- 
+
+   if((player1 || player2) !== 'rock' || (player1 || player2) !== 'paper' || (player1 || player2) !== 'scissors') {
+    return 'Someone entered an invalid input.';
+   }
+
    return 'Player 1 wins!';
  }
+
+ module.exports = whoWon;
