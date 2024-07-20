@@ -3,7 +3,7 @@
 // Next, set default values for 1 or more of the parameters in constructor.
 
 class Astronaut {
-   constructor(name, age, mass){
+   constructor(name = 'TBD', age = 'TBD', mass = 'TBD'){
      this.name = name;
      this.age = age;
      this.mass = mass;
@@ -15,3 +15,8 @@ let tortoise = new Astronaut('Speedy', 120);
 console.log(tortoise.name, tortoise.age, tortoise.mass);
 
 // What happens if we call Astronaut and pass in MORE than 3 arguments? TRY IT!
+
+let spider = new Astronaut('Charlotte', 1, '1g', 'Fourth')
+
+console.log(spider.name,spider.age,spider.mass);
+console.log(spider);

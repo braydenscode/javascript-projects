@@ -21,3 +21,21 @@ class Tiger extends Panthera {
 let tigger = new Tiger();
 
 console.log(tigger);
+
+class Felis extends Felidae {
+	constructor() {
+	super();
+		this.pupils = 'vertical';
+	}
+}
+
+class Housecat extends Felis {
+	constructor() {
+	super();
+		this.personality = 'judgemental';
+	}
+}
+
+let kitty = new Housecat();
+
+console.log(kitty);
