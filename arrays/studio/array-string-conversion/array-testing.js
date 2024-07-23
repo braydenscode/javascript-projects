@@ -5,53 +5,51 @@ let protoArray4 = "Comma-spaces, might, require, typing, caution";
 
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 
-let givenString = 0;
-console.log(`String's delimiter is a comma. ${strings[givenString].includes(',')}`);
-console.log(`String's delimiter is a semicolon. ${strings[givenString].includes(';')}`);
-console.log(`String's delimiter is a space. ${strings[givenString].includes(' ')}`);
+// let givenString = 1;
+// console.log(`String's delimiter is a comma. ${strings[givenString].includes(',')}`);
+// console.log(`String's delimiter is a semicolon. ${strings[givenString].includes(';')}`);
+// console.log(`String's delimiter is a space. ${strings[givenString].includes(' ')}`);
 
 
 //2) 
 function reverseCommas() {
 	//TODO: 1. create and instantiate your variables.
-	let check;
-	let output;
+	let check = strings[0];
+	let output = [];
 	//TODO: 2. write the code required for this step
-if (strings[givenString].includes(',')) {
-	console.log(strings[givenString].split());
-}
+	output = check.split(',').reverse().join(',');
 	//NOTE: For the code to run properly, you must return your output.  this needs to be the final line of code within the function's { }.
 	return output;
 }
-
+console.log(reverseCommas());
 //3)
 function semiDash() {
-	let check;
-	let output;
+	let check = strings[1];
+	let output = [];
 //TODO: write the code required for this step
-
+	output = check.split(';').sort().join('-');
   
 	return output;
 }
-
+console.log(semiDash());
 //4)
 function reverseSpaces() {
-	let check;
-	let output;
+	let check = strings[2];
+	let output = [];
   //TODO: write the code required for this step
-
+		output = check.split(' ').reverse().join(' ')
 	return output;
 }
-
+console.log(reverseSpaces());
 //5)
 function commaSpace() {
-	let check;
-	let output;
+	let check = strings[3];
+	let output = [];
 	//TODO: write the code required for this step
-  
+		output = check.split(', ').join(',');
 	return output;
 }
-
+console.log(commaSpace());
 // NOTE: Don't add or modify any code below this line or your program might not run as expected.
 module.exports = {
 	strings : strings, 
