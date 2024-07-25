@@ -58,15 +58,21 @@ console.log(bumpToReserve(gladGator))
 console.log(bumpToAccepted(gladGator))
 //Part 4 - Use the methods to boost Glad Gator’s status to Reserve or higher. How many tests will it take to reach Reserve status? How many to reach Accepted? Remember, scores cannot exceed 100%.
 function bumpToReserve(crewMember) {
+    let testsNeeded = 0;
     while (crewMember.average() < 80) {
         crewMember.addScore(100);
+        testsNeeded += 1;
     }
+    console.log(`It will take a minimum of ${testsNeeded} tests to reach Reserve status.`);
     return crewMember.status()
   }
 
 function bumpToAccepted(crewMember) {
+    let testsNeeded = 0;
     while (crewMember.average() < 90) {
         crewMember.addScore(100);
+        testsNeeded += 1;
     }
+    console.log(`It will take a minimum of ${testsNeeded} tests to reach Accepted status.`);
     return crewMember.status()
   }
