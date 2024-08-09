@@ -1,19 +1,63 @@
 <!doctype html>
 
 <head>
+	<style>
+		input[type="text"] {
+    width: 200px;
+	}
+		body {
+	/* align-content: center; */
+	vertical-align: middle;
+	align-items: ;
+	}
+		div {
+			margin-top: 350px;
+		}
+	</style>
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
     window.addEventListener("load", function(){
         // TODO: register the handler
+		let engine = document.querySelector("input[name = engine]")
+		let text = document.querySelector("input[name = q]")
+		let form = document.querySelector("form");
+		form.addEventListener("submit", function (event) {
+			console.log("Google working");
+
+			if (document.getElementById("google").checked) {
+				document.getElementById("searchForm").setAttribute("action", "https://www.google.com/search");
+			} else if (document.getElementById("duckDuckGo").checked) {
+				document.getElementById("searchForm").setAttribute("action", "https://duckduckgo.com/");
+			} else if (document.getElementById("bing").checked) {
+				document.getElementById("searchForm").setAttribute("action", "https://www.bing.com/search");
+			} else if (document.getElementById("ask").checked) {
+				document.getElementById("searchForm").setAttribute("action", "https://www.ask.com/web");
+			}
+
+		})
+		function setSearchEngine() {
+			console.log("setSearchEngine function runs.")
+		}
     });
 	</script>
 </head>
 
-<body>
-
-	<form id="searchForm">
+<body style="background-color: darkgray;">
+	<div class="center">
+	<form id="searchForm" style="text-align: center;margin: 50px; border: 10px;">
     <!-- TODO: add form elements -->
+
+	</br>
+	 <label style="margin-right: 20px;">Google<input type="radio" name="engine" value="google" id="google" required></label>
+	 <label style="margin-right: 20px;">Duck Duck Go<input type="radio" name="engine" value="duckDuckGo" id="duckDuckGo"></label>
+	 <label style="margin-right: 20px;">Bing<input type="radio" name="engine" value="bing" id="bing"></label>
+	 <label style="margin-right: 20px;">Ask<input type="radio" name="engine" value="ask" id="ask"></label>
+	</br>
+	<input style="margin-top: 20px;" type="text" name="q" required>
+	</br>
+	 <button style="margin-top: 20px;" id="submit">Submit</button>
 	</form>
+</div>
 
 </body>
